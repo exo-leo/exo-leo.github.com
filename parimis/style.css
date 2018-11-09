@@ -1,0 +1,30 @@
+.togglemenu {
+  display:block; width:1em;height:1em;
+  background:url("https://svgshare.com/i/66Z.svg") center no-repeat; background-size:contain;
+  position:fixed; right:0; top:0; margin:.5em; z-index:1;
+}
+
+/*.menu {visibility:hidden;}
+.menu.active {visibility:visible;}*/
+
+.menu {
+  text-align:center;
+
+  position:absolute;left:50%;top:50%; transform:translate(-50%,-50%);
+}
+.menu ul {list-style:none; padding-left:0;padding-right:0;}
+
+#overlay {
+  position:fixed; left:0;top:0;
+  width:100%;height:100vh;
+  background:rgba(255,255,255,.97);
+
+  opacity:0;
+  transition:opacity .3s; will-change:opacity;
+  pointer-events:none;
+}
+#overlay.active {opacity:1; pointer-events:auto;}
+
+.menu a {
+  color:black;
+}
